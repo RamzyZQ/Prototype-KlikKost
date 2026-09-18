@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>KlikKost — Cari kost tervalidasi di sekitar UNNES</title>
+  <meta name="description" content="Direktori kost di sekitar UNNES Sekaran, Gunungpati. Tiap kost didatangi surveyor: foto tanpa lensa wide, speedtest WiFi, nilai sanitasi, dan iuran tersembunyi ditulis apa adanya. Tanpa unduh aplikasi." />
+  <meta name="theme-color" content="#eceef6" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#15161e" media="(prefers-color-scheme: dark)" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: { xs: '380px' },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'] },
+          maxWidth: { content: '78rem' }
+        }
+      }
+    };
+  </script>
+
+  <!-- Tema dipulihkan sebelum render supaya tidak berkedip -->
+  <script>
+    try {
+      var t = localStorage.getItem('kk-tema');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) { /* mode privat: abaikan */ }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.25.6/babel.min.js"></script>
+</head>
+<body>
+  <a href="#hasil" class="lewati">Lompat ke daftar kost</a>
+  <div id="root"></div>
+  <noscript>
+    <p style="padding:2rem;text-align:center">KlikKost membutuhkan JavaScript untuk menampilkan daftar kost.</p>
+  </noscript>
+
+  <!-- Data dulu, baru antarmuka -->
+  <script src="data.js"></script>
+  <script type="text/babel" data-presets="react" src="app.js"></script>
+</body>
+</html>

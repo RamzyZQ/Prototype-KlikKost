@@ -258,7 +258,12 @@ const KostCard = memo(function KostCard({ kost, bayar, onOpen, dibandingkan, onT
 
       <div className="flex flex-col h-full w-full">
         <div className="relative w-full">
-          <RoomArt hue={kost.hue} variant={0} className="w-full h-44 sm:h-40 object-cover" />
+          {kost.foto_utama ? (
+            <img src={kost.foto_utama} alt={`Foto ${kost.nama}`} loading="lazy"
+              className="w-full h-64 sm:h-80 object-cover bg-gray-200" />
+          ) : (
+            <RoomArt hue={kost.hue} variant={kost.id.length % 3} className="w-full h-56 sm:h-72" />
+          )}
           <div className="absolute top-3 left-3">
             {kost.verified ? <VerifiedBadge compact /> : <BelumSurveiBadge />}
           </div>
@@ -399,7 +404,11 @@ function MapView({ daftar, bayar, onOpen }) {
 
       {terpilih ? (
         <article className="clay-soft rounded-3xl p-4 flex flex-col sm:flex-row gap-4 items-start">
-          <RoomArt hue={terpilih.hue} variant={2} className="w-full sm:w-40 h-28 rounded-2xl overflow-hidden shrink-0" />
+          {terpilih.foto_utama ? (
+            <img src={terpilih.foto_utama} alt={terpilih.nama} className="w-full sm:w-40 h-28 object-cover rounded-2xl shrink-0 bg-gray-200" loading="lazy" />
+          ) : (
+            <RoomArt hue={terpilih.hue} className="w-full sm:w-40 h-28 rounded-2xl shrink-0" />
+          )}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               {terpilih.verified ? <VerifiedBadge compact /> : <BelumSurveiBadge />}
@@ -431,7 +440,10 @@ function DetailModal({ kost, bayar, onClose }) {
   const [foto, setFoto] = useState(0);
   const [modeBayar, setModeBayar] = useState(bayar);
   const dialogRef = useRef(null);
-  const fotoLabel = ["Kamar tipe standar", "Kamar mandi", "Tampak depan bangunan"];
+
+  const semuaFoto = [kost.foto_utama, ...(kost.galeri || [])].filter(Boolean);
+  const jumlahFoto = semuaFoto.length || 1;
+  const fotoAktif = semuaFoto.length ? semuaFoto[foto % semuaFoto.length] : null;
 
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -476,21 +488,29 @@ function DetailModal({ kost, bayar, onClose }) {
           {/* Galeri */}
           <section aria-label="Foto hasil kunjungan">
             <div className="relative rounded-3xl overflow-hidden clay-soft">
-              <RoomArt hue={kost.hue} variant={foto} className="w-full h-56 sm:h-72" />
+              {fotoAktif ? (
+                <img src={fotoAktif} alt={`Foto ${kost.nama}`} className="w-full h-65 sm:h-80 object-contain bg-gray-200" loading="lazy" />
+              ) : (
+                <RoomArt hue={kost.hue} variant={foto % 3} className="w-full h-44 sm:h-40" />
+              )}
               <div className="absolute inset-x-0 bottom-0 p-3 flex items-center justify-between gap-2 foto-kaki">
                 <span className="inline-flex items-center gap-1.5 t-micro font-bold" style={{ color: "#2b3049" }}>
-                  <Icon name="camera" size={13} strokeWidth={2.3} /> Tanpa lensa wide — {fotoLabel[foto]}
+                  <Icon name="camera" size={13} strokeWidth={2.3} /> {fotoAktif ? "Tanpa lensa wide" : "Ilustrasi sementara"}
                 </span>
-                <span className="t-micro font-semibold" style={{ color: "#5a6080" }}>{foto + 1}/3</span>
+                <span className="t-micro font-semibold" style={{ color: "#5a6080" }}>{foto + 1}/{jumlahFoto}</span>
               </div>
-              <button type="button" aria-label="Foto sebelumnya" onClick={() => setFoto((f) => (f + 2) % 3)}
-                className="chip rounded-full p-2 absolute left-3 top-1/2 -translate-y-1/2"><Icon name="chevronLeft" size={16} strokeWidth={2.5} /></button>
-              <button type="button" aria-label="Foto berikutnya" onClick={() => setFoto((f) => (f + 1) % 3)}
-                className="chip rounded-full p-2 absolute right-3 top-1/2 -translate-y-1/2"><Icon name="chevronRight" size={16} strokeWidth={2.5} /></button>
+              {jumlahFoto > 1 && (
+                <>
+                  <button type="button" aria-label="Foto sebelumnya" onClick={() => setFoto((f) => (f + jumlahFoto - 1) % jumlahFoto)}
+                    className="chip rounded-full p-2 absolute left-3 top-1/2 -translate-y-1/2"><Icon name="chevronLeft" size={16} strokeWidth={2.5} /></button>
+                  <button type="button" aria-label="Foto berikutnya" onClick={() => setFoto((f) => (f + 1) % jumlahFoto)}
+                    className="chip rounded-full p-2 absolute right-3 top-1/2 -translate-y-1/2"><Icon name="chevronRight" size={16} strokeWidth={2.5} /></button>
+                </>
+              )}
             </div>
             <p className="t-small muted mt-2 flex items-start gap-1.5">
               <Icon name="info" size={15} className="shrink-0 mt-0.5" />
-              Semua foto diambil surveyor dengan lensa standar, tanpa penyuntingan. Ukuran kamar yang Anda lihat sama dengan aslinya.
+              Semua foto yang terverifikasi diambil surveyor dengan lensa standar, tanpa penyuntingan. Ukuran kamar yang Anda lihat sama dengan aslinya.
             </p>
           </section>
 

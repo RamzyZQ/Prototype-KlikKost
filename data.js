@@ -47,7 +47,12 @@
       status: "Tersedia",
       kamarSisa: 3,
       totalKamar: 12,
-      hue: 262,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(2).webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(3).webp", // Index 0 bisa diisi foto utama
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(4).webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(1).webp"
+    ],
       peta: { x: 30, y: 38 },
       wa: "6281234567801",
       harga: { bulan: 850000, tahun: 9180000 },
@@ -95,7 +100,13 @@
       status: "Tersedia",
       kamarSisa: 5,
       totalKamar: 16,
-      hue: 200,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Budi%20UNNES/Kost%20Budi%20UNNES(3).webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Budi%20UNNES/Kost%20Budi%20UNNES(1).webp", // Index 0 bisa diisi foto utama
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Budi%20UNNES/Kost%20Budi%20UNNES(2).webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Budi%20UNNES/Kost%20Budi%20UNNES(4).webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Budi%20UNNES/Kost%20Budi%20UNNES(5).webp",
+    ],
       peta: { x: 48, y: 55 },
       wa: "6281234567802",
       harga: { bulan: 650000, tahun: 7020000 },
@@ -143,7 +154,12 @@
       status: "Tersedia",
       kamarSisa: 2,
       totalKamar: 10,
-      hue: 160,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(2).webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(3).webp", // Index 0 bisa diisi foto utama
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(4).webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(1).webp"
+    ],
       peta: { x: 66, y: 30 },
       wa: "6281234567803",
       harga: { bulan: 1450000, tahun: 15660000 },
@@ -191,7 +207,13 @@
       status: "Penuh",
       kamarSisa: 0,
       totalKamar: 8,
-      hue: 330,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Cempaka%20Sari/Kost%20Cempaka%20Sari2.webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Cempaka%20Sari/Kost%20Cempaka%20Sari1.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Cempaka%20Sari/Kost%20Cempaka%20Sari3.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Cempaka%20Sari/Kost%20Cempaka%20Sari4.webp", // Index 0 bisa diisi foto utama
+      
+    ],
       peta: { x: 22, y: 62 },
       wa: "6281234567804",
       harga: { bulan: 1100000, tahun: 11880000 },
@@ -234,12 +256,18 @@
       id: "banaran-putra",
       nama: "Pondok Banaran Putra",
       tipe: "Putra",
-      verified: true,
+      verified: false,
       last_updated: "Diperbarui 1 minggu lalu",
       status: "Tersedia",
       kamarSisa: 7,
       totalKamar: 20,
-      hue: 32,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Pondok%20Banaran%20Putra/Pondok%20Banaran%20Putra2.webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Pondok%20Banaran%20Putra/Pondok%20Banaran%20Putra1.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Pondok%20Banaran%20Putra/Pondok%20Banaran%20Putra3.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Pondok%20Banaran%20Putra/Pondok%20Banaran%20Putra4.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Pondok%20Banaran%20Putra/Pondok%20Banaran%20Putra5.webp",
+    ],
       peta: { x: 78, y: 70 },
       wa: "6281234567805",
       harga: { bulan: 500000, tahun: 5400000 },
@@ -268,12 +296,12 @@
         tamu: "Tamu bebas sampai 23.00",
       },
       verifikasi: {
-        wifiMbps: 12,
-        wifiCatatan: "Cukup untuk kelas online, berat untuk unduh file besar",
-        sanitasi: 3.9,
-        sanitasiCatatan: "Kamar mandi luar bersih tapi lantai licin, tidak ada exhaust",
-        surveyor: "Fajar",
-        tanggal: "5 September 2026",
+        wifiMbps: null,
+        wifiCatatan: "Belum diuji. Pemilik mengklaim 15 Mbps.",
+        sanitasi: null,
+        sanitasiCatatan: "Belum dinilai surveyor.",
+        surveyor: null,
+        tanggal: null,
       },
       catatan_jujur:
         "Paling murah di daftar, tapi kamar kosong tanpa kasur dan lemari. Siapkan Rp 1,5 juta untuk perabot sendiri.",
@@ -287,7 +315,12 @@
       status: "Tersedia",
       kamarSisa: 4,
       totalKamar: 14,
-      hue: 220,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(2).webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(3).webp", // Index 0 bisa diisi foto utama
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(4).webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kos%20Melati%20Tipe%20A/Kos%20Melati%20Tipe%20A(1).webp"
+    ],
       peta: { x: 86, y: 22 },
       wa: "6281234567806",
       harga: { bulan: 1800000, tahun: 19440000 },
@@ -336,7 +369,13 @@
       status: "Penuh",
       kamarSisa: 0,
       totalKamar: 9,
-      hue: 288,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Anggrek%20Kalimasada/Kost%20Anggrek%20Kalimasada(3).webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Anggrek%20Kalimasada/Kost%20Anggrek%20Kalimasada(1).webp", // Index 0 bisa diisi foto utama
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Anggrek%20Kalimasada/Kost%20Anggrek%20Kalimasada(2).webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Anggrek%20Kalimasada/Kost%20Anggrek%20Kalimasada(4).webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Anggrek%20Kalimasada/Kost%20Anggrek%20Kalimasada(5).webp",
+    ],
       peta: { x: 40, y: 20 },
       wa: "6281234567807",
       harga: { bulan: 750000, tahun: 8100000 },
@@ -384,7 +423,15 @@
       status: "Tersedia",
       kamarSisa: 2,
       totalKamar: 11,
-      hue: 128,
+      foto_utama:"https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Taruna%20Sekaran/Kost%20Taruna%20Sekaran5.webp",
+      galeri: [
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Taruna%20Sekaran/Kost%20Taruna%20Sekaran1.webp", // Index 0 bisa diisi foto utama
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Taruna%20Sekaran/Kost%20Taruna%20Sekaran2.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Taruna%20Sekaran/Kost%20Taruna%20Sekaran3.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Taruna%20Sekaran/Kost%20Taruna%20Sekaran4.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Taruna%20Sekaran/Kost%20Taruna%20Sekaran6.webp",
+      "https://ektmuhgejwhrnjwdjgej.supabase.co/storage/v1/object/public/kamar-kost/Kost%20Taruna%20Sekaran/Kost%20Taruna%20Sekaran7.webp",
+    ],
       peta: { x: 57, y: 76 },
       wa: "6281234567808",
       harga: { bulan: 950000, tahun: 10260000 },
